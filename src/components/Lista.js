@@ -1,3 +1,4 @@
+import './estilos/lista.css'
 import React from "react"
 import {firebase} from '../firebase'
 
@@ -24,8 +25,25 @@ export function Lista() {
     })
 
     return(
-        <div>
-            <ul>{ lista.map((item, index)=><li key={index}><p>{item.tipoTransaccion} - {item.monto}</p></li>) }</ul>    
+        <>
+        <p className='titulo'>Movimientos</p>
+        <div className="lista">
+            <ul>{ 
+                lista.map((item, index)=>{
+                    return <li key={index} className="listaItem">
+                            <p>
+                                <b>Tipo de transaccion: </b>{item.tipoTransaccion}<br />
+                                <b>Clasificacion: </b>{item.clasificacion}<br />
+                                <b>Descripcion: </b>{item.descripcion}<br />
+                                <b>Monto: </b>${item.monto}<br />
+                                <b>Cedula: </b>{item.cedula}<br />
+                                <b>Nombre: </b>{item.nombre}<br />
+                                <b>Fecha: </b>{item.fecha}<br />
+                            </p>
+                        </li>
+                }) 
+            }</ul>    
         </div>
+        </>
     );
 }
