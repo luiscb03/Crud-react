@@ -13,6 +13,11 @@ export function Formulario(props) {
     const [fecha, setFecha] = React.useState('')
     const [lista, setLista] = React.useState([])
 
+    
+    const [modoEdicion, setModoEdicion] = React.useState(false)
+    const [id, setId] = React.useState('')
+    const [error, setError] = React.useState(null)
+
     const guardar = async (e) =>{
         e.preventDefault()
         try {
@@ -47,29 +52,10 @@ export function Formulario(props) {
         }
     }
 
-    // React.useEffect(()=>{
-    //     const obtenerDatos = async () =>{
-    //         try{
-    //             const db = firebase.firestore()
-    //             const data = await db.collection('transacciones').get()
-    //             const array = data.docs.map(item =>(
-    //                 {
-    //                     id:item.id, ...item.data()
-    //                 }
-    //             ))
-    //             setLista(array)
-
-    //         }catch(error){
-    //             console.log(error)
-    //         }
-    //     }
-    //     obtenerDatos()
-    // })
-
     return(
         <div>
             <p className="titulo">Registar nueva transaccion</p>
-            <form onSubmit={guardar}>
+            <form onSubmit={guardar} className="form">
                 <div className="secciones">
                     <label htmlFor="">Tipo de transaccion</label>
                     <select name="transaccion" onChange={(e)=>setTipoTransaccion(e.target.value)}>
@@ -123,11 +109,6 @@ export function Formulario(props) {
 
                 <button type="submit" className="btnEnviar">Crear</button>
             </form>
-            {/* <ul>
-                {
-                    lista.map((item, index)=><li key={index}><p>{item.tipoTransaccion} - {item.monto}</p></li>)
-                }
-            </ul> */}
         </div>
     );
 }
