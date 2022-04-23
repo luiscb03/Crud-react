@@ -32,6 +32,7 @@ export function Lista() {
                 lista.map((item, index)=>{
                     return <li key={index} className="listaItem">
                             <p>
+                                <b>Id de movimiento: </b>{item.id}<br /> 
                                 <b>Tipo de transaccion: </b>{item.tipoTransaccion}<br />
                                 <b>Clasificacion: </b>{item.clasificacion}<br />
                                 <b>Descripcion: </b>{item.descripcion}<br />
