@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 29px;
+    color: rgb(43, 43, 43);
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+form{
+    width: 50em;
+    height: 26em;
+    background-color: white;
+    border-radius: 7px;
+    padding: 30px;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    width: 250px;
+    /* text-align: right;
+    padding-right: 12px; */
+}
+
+.secciones{
+    width: 650px;
+    height: auto;
+    margin: 10px;
+    padding-right: 50px;
+    display: flex;
+}
+
+select, input{
+    width: 317px;
+    border: 1px solid rgb(173, 173, 173);
+    padding: 0%;
+    color: grey;
+    height: 27px;
+    border-radius: 4px;
+}
+
+textarea{
+    border: 1px solid rgb(173, 173, 173);
+    color: grey;
+    border-radius: 4px
+}
+
+.btnEnviar{
+    float: right;
+    margin-right: 221px;
+    border: none;
+    width: 150px;
+    background-color: #1C75FF;
+    color: white;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
