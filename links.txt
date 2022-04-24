@@ -1,0 +1,3 @@
+
+amplify: https://desarrollo.d2bx1sfp1ohzto.amplifyapp.com/
+amplify: https://crud-web-bp.netlify.app/
