@@ -47,6 +47,16 @@ export function Formulario(props) {
             ])
             
             await db.collection('transacciones').add(nuevaTransaccion)
+
+            setTipoTransaccion('')
+            setClasificacion('')
+            setDescripcion('')
+            setMonto('')
+            setCedula('')
+            setNombre('')
+            setFecha('')
+
+            alert('Guardado con exito')
         } catch (error) {
             console.log(error)
         }
@@ -58,7 +68,7 @@ export function Formulario(props) {
             <form onSubmit={guardar} className="form">
                 <div className="secciones">
                     <label htmlFor="">Tipo de transaccion</label>
-                    <select name="transaccion" onChange={(e)=>setTipoTransaccion(e.target.value)}>
+                    <select name="transaccion" onChange={(e)=>setTipoTransaccion(e.target.value)} required>
                         <option value="0"></option>
                         <option value="consignacion">Consignacion</option>
                         <option value="retiro">Retiro</option>
@@ -67,7 +77,7 @@ export function Formulario(props) {
 
                 <div className="secciones">
                     <label htmlFor="">Clasificacion</label>
-                    <select name="clasificacions" onChange={(e)=>setClasificacion(e.target.value)}>
+                    <select name="clasificacions" onChange={(e)=>setClasificacion(e.target.value)} required>
                         <option value="0"></option>
                         <option value="osio">Osio</option>
                         <option value="Pago de servicios">Pago de servicios</option>
@@ -76,35 +86,35 @@ export function Formulario(props) {
                     </select>
                 </div>
 
-                <div className="secciones">
+                <div className="secciones" >
                     <label htmlFor="">Descripcion</label>
                     <textarea name="descripciion" cols="40" rows="5" placeholder="" 
-                        onChange={(e)=>setDescripcion(e.target.value)}>
+                        onChange={(e)=>setDescripcion(e.target.value)} required>
                     </textarea>
                 </div>
 
                 <div className="secciones">
                     <label htmlFor="">Monto de transaccion</label>
-                    <input type="number" name="monto" id="" 
-                        onChange={(e)=>setMonto(e.target.value)}/>
+                    <input type="text" name="monto" id="" 
+                        onChange={(e)=>setMonto(e.target.value)} required/>
                 </div>
 
                 <div className="secciones">
                     <label htmlFor="">Cedula</label>
-                    <input type="number" name="cedula" id="" 
-                        onChange={(e)=>setCedula(e.target.value)}/>
+                    <input type="text" name="cedula" id="" 
+                        onChange={(e)=>setCedula(e.target.value)} required/>
                 </div>
 
                 <div className="secciones">
                     <label htmlFor="">Nombre</label>
                     <input type="text" name="nombre" id="" 
-                        onChange={(e)=>setNombre(e.target.value)}/>
+                        onChange={(e)=>setNombre(e.target.value)} required/>
                 </div>
 
                 <div className="secciones">
                     <label htmlFor="">Fecha</label>
                     <input type="date" name="fecha" id="" 
-                        onChange={(e)=>setFecha(e.target.value)}/>
+                        onChange={(e)=>setFecha(e.target.value)} required/>
                 </div>
 
                 <button type="submit" className="btnEnviar">Crear</button>

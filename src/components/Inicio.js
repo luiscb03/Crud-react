@@ -1,7 +1,9 @@
+import { Lista } from "./Lista";
+
 export function Inicio() {
     return(
         <>
-            <h1>Este es el inico bebe</h1>
+            <Lista></Lista>
         </>
     );
 }

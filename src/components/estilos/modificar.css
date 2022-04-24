@@ -43,3 +43,33 @@
     background-color: rgb(79, 120, 235);
     color: white;
 }
+.editt:hover{
+    transition: 0.5s;
+    background-color: rgb(79, 120, 235);
+    color: white;
+}
+
+.formularioEdit{
+    padding: 15px;
+}
+
+.formularioEdit input{
+    margin: 7px;
+    color: rgb(20, 20, 20);
+}
+
+.formularioEdit label{
+    height: 170px;
+}
+
+.editt{
+    margin-left: 10px;
+    height: 31px;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(19, 71, 214);
+    color: white;
+    cursor: pointer;
+    float: right;
+}

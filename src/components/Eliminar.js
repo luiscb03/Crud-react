@@ -32,6 +32,7 @@ export function Eliminar() {
             await db.collection('transacciones').doc(id).delete()
             const aux = lista.filter(item => item.id !== id)
             setLista(aux)
+            alert('eliminado con exito')
         }catch(error){
             console.log(error)
         }
