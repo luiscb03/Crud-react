@@ -53,7 +53,7 @@ export function Modificar() {
 
             alert('Informacion editada con exito')
         } catch (error) {
-            console.log(error)
+            console.log(error, modoEdicion)
         }
     }
 
