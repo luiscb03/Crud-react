@@ -14,9 +14,6 @@ export function Formulario(props) {
     const [lista, setLista] = React.useState([])
 
     
-    const [modoEdicion, setModoEdicion] = React.useState(false)
-    const [id, setId] = React.useState('')
-    const [error, setError] = React.useState(null)
 
     const guardar = async (e) =>{
         e.preventDefault()
